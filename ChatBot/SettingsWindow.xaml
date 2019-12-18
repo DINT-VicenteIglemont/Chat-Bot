@@ -1,0 +1,48 @@
+﻿<Window x:Class="ChatBot.SettingsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ChatBot"
+        xmlns:properties="clr-namespace:ChatBot.Properties"
+        mc:Ignorable="d"
+        Title="Configuracion" Height="200" Width="300" ResizeMode="NoResize" Icon="Iconos/Configuracion.ico">
+
+    <Window.Resources>
+
+        <DataTemplate x:Key="ComboBoxColores">
+            <StackPanel Orientation="Horizontal">
+                <Rectangle Fill="{Binding Name}" Height="18" Width="22" Margin="10,0"/>
+                <TextBlock Text="{Binding Name}"/>
+            </StackPanel>
+        </DataTemplate>
+
+    </Window.Resources>
+    
+    <DockPanel LastChildFill="True">
+        <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal" HorizontalAlignment="Right" Margin="20">
+            <Button x:Name="GuardarButton" Content="Guardar" Width="75" Margin="10, 0" Click="GuardarButton_Click"/>
+            <Button x:Name="Salirbutton" Content="Cancelar" Width="75" Margin="10, 0" Click="Salirbutton_Click"></Button>
+        </StackPanel>
+        
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="125"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Text="Color del fondo" Margin="10" VerticalAlignment="Center" Grid.Row="0" Grid.Column="0"/>
+            <TextBlock Text="Color del humano" Margin="10" VerticalAlignment="Center" Grid.Row="1" Grid.Column="0"/>
+            <TextBlock Text="Color del robot" Margin="10" VerticalAlignment="Center" Grid.Row="2" Grid.Column="0"/>
+
+            <ComboBox x:Name="FondoColorComboBox" SelectedValue="{Binding RelativeSource={RelativeSource AncestorType=local:SettingsWindow}, Path=Fondo}" SelectedValuePath="Name" ItemTemplate="{StaticResource ComboBoxColores}" Height="24" Grid.Row="0" Grid.Column="1" Margin="5"/>
+            <ComboBox x:Name="HumanoColorComboBox" SelectedValue="{Binding RelativeSource={RelativeSource AncestorType=local:SettingsWindow}, Path=Humano}" SelectedValuePath="Name" ItemTemplate="{StaticResource ComboBoxColores}" Height="24" Grid.Row="1" Grid.Column="1" Margin="5"/>
+            <ComboBox x:Name="RobotColorCOmboBox" SelectedValue="{Binding RelativeSource={RelativeSource AncestorType=local:SettingsWindow}, Path=Robot}" SelectedValuePath="Name" ItemTemplate="{StaticResource ComboBoxColores}" Height="24" Grid.Row="2" Grid.Column="1" Margin="5"/>
+        </Grid>
+    </DockPanel>
+</Window>

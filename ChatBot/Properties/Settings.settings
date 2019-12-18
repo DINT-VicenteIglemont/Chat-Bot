@@ -1,0 +1,24 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="ChatBot.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="ColorFondo" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Red</Value>
+    </Setting>
+    <Setting Name="ColorPersona" Type="System.String" Scope="User">
+      <Value Profile="(Default)">LightGreen</Value>
+    </Setting>
+    <Setting Name="ColorRobot" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Aquamarine</Value>
+    </Setting>
+    <Setting Name="EndPoint" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">https://actividad5-1mibot.azurewebsites.net</Value>
+    </Setting>
+    <Setting Name="Id" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">ea5121e2-c310-435d-88e2-0ea69bc6c54d</Value>
+    </Setting>
+    <Setting Name="Key" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">70be97b6-a339-4a21-96f1-c9810058032e</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
